@@ -1,4 +1,4 @@
-name: Firebase Continuous Deployment
+name: Despliegue a Firebase
 
 on:
   push:
@@ -9,13 +9,17 @@ jobs:
   deploy:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@main
-      - uses: actions/setup-node@main
+      - uses: actions/checkout@master
+      - uses: actions/setup-node@master
         with:
           node-version: 16
-      - run: npm ci
-      - run: npm run build
-      - uses: w9jds/firebase-action@main
+      - uses: borales/actions-yarn@v2.3.0
+        with:
+          cmd: install # will run `yarn install` command
+      - uses: borales/actions-yarn@v2.3.0
+        with:
+          cmd: generate # will run `yarn generate` command
+      - uses: w9jds/firebase-action@master
         with:
           args: deploy --only hosting
         env:

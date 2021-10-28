@@ -5,24 +5,24 @@ div
 </template>
 <script>
 function asdf (a) {
-  console.log('a', a)
+	console.log('a', a)
 }
 
 export default {
-  data () {
-    return {
-      codigo: asdf.toString()
-    }
-  },
-  computed: {
-    codigo2 () { return this.fsda.toString() }
-  },
-  methods: {
-    fsda (fdds, ds) {
-      // DFASFD
-      console.log('obj', {fdds, ds})
-    }
-  }
+	data () {
+		return {
+			codigo: asdf.toString()
+		}
+	},
+	computed: {
+		codigo2 () { return this.fsda.toString() }
+	},
+	methods: {
+		fsda (fdds, ds) {
+			// DFASFD
+			console.log('obj', {fdds, ds})
+		}
+	}
 }
 </script>
 <style lang="sass" scoped>
