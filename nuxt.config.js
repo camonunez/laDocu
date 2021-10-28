@@ -41,6 +41,10 @@ export default {
     '@nuxtjs/pwa',
     // https://go.nuxtjs.dev/content
     '@nuxt/content',
+    // https://github.com/Llang8/nuxt-highlightjs
+    ['nuxt-highlightjs', {
+      style: 'tomorrow-night-bright'
+    }]
   ],
 
   // PWA module configuration: https://go.nuxtjs.dev/pwa
