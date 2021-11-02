@@ -12,6 +12,18 @@ _.omitDeep = function (collection, excludeKeys) {
 	return _.cloneDeepWith(collection, omitFn)
 }
 
+_.pathValues = function (objeto) {
+	function getPaths (object) {
+		return object && typeof object === 'object' && !_.isArray(object) && !_.isFunction(object) && Object.keys(object).reduce((p, k) =>
+			(getPaths(object[k]) || [[]]).reduce((r, a) =>
+				[...r, [k, ...a]], p), [])
+	}
+
+	const paths = getPaths(objeto)
+	const pvs = {}
+	_.forEach(paths, path => { pvs[path.join('.')] = _.get(objeto, path) })
+	return pvs
+}
 
 export default () => {
 	Vue.prototype._ = _

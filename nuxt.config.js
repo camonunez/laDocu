@@ -29,8 +29,13 @@ export default {
 		'ant-design-vue/dist/antd.css'
 	],
 	plugins: [
-		'@/plugins/antd-ui',
-		'~/plugins/prism'
+		'~/plugins/antd-ui',
+		'~/plugins/consolo',
+		'~/plugins/i18n',
+		'~/plugins/i18n',
+		'~/plugins/lodash',
+		'~/plugins/prism',
+		'~/plugins/utilidades'
 		// { src: '~/plugins/prism', mode: 'client' }
 	],
 	components: true,

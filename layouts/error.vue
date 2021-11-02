@@ -13,7 +13,13 @@
 export default {
 	layout: 'error',
 	// eslint-disable-next-line
-	props: ['error']
+	props: ['error'],
+	traducciones: {
+		noEncontrada: {
+			es: 'Página no encontrada',
+			en: 'Page not found'
+		}
+	}
 }
 </script>
 <style lang="sass" scoped>
