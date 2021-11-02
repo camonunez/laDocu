@@ -1,8 +1,18 @@
-export default {
-	// Target: https://go.nuxtjs.dev/config-target
-	target: 'static',
 
-	// Global page headers: https://go.nuxtjs.dev/config-head
+const dev = (process.env.MODO === 'dev')
+
+export default {
+	server: {
+		port: 3024,
+		host: '0.0.0.0',
+		timing: false
+	},
+	env: {
+		DEV: dev,
+		VERSION: process.env.npm_package_version
+	},
+	devtools: dev,
+	target: 'static',
 	head: {
 		title: 'laDocu',
 		meta: [
@@ -15,49 +25,35 @@ export default {
 			{ rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }
 		]
 	},
-
-	// Global CSS: https://go.nuxtjs.dev/config-css
 	css: [
 		'ant-design-vue/dist/antd.css'
 	],
-
-	// Plugins to run before rendering page: https://go.nuxtjs.dev/config-plugins
 	plugins: [
-		'@/plugins/antd-ui'
+		'@/plugins/antd-ui',
+		'~/plugins/prism'
+		// { src: '~/plugins/prism', mode: 'client' }
 	],
-
-	// Auto import components: https://go.nuxtjs.dev/config-components
 	components: true,
-
-	// Modules for dev and build (recommended): https://go.nuxtjs.dev/config-modules
 	buildModules: [
 		// https://go.nuxtjs.dev/eslint
 		'@nuxtjs/eslint-module',
 	],
 
 	// Modules: https://go.nuxtjs.dev/config-modules
-	modules: [
-		// https://go.nuxtjs.dev/pwa
-		'@nuxtjs/pwa',
-		// https://go.nuxtjs.dev/content
-		'@nuxt/content',
-		// https://github.com/Llang8/nuxt-highlightjs
-		['nuxt-highlightjs', {
-			style: 'tomorrow-night-bright'
-		}]
-	],
+	// modules: [
+	// 	// https://go.nuxtjs.dev/pwa
+	// 	'@nuxtjs/pwa'
+	// ],
 
 	// PWA module configuration: https://go.nuxtjs.dev/pwa
-	pwa: {
-		manifest: {
-			lang: 'en'
-		}
-	},
-
-	// Content module configuration: https://go.nuxtjs.dev/config-content
-	content: {},
+	// pwa: {
+	// 	manifest: {
+	// 		lang: 'es'
+	// 	}
+	// },
 
 	// Build Configuration: https://go.nuxtjs.dev/config-build
 	build: {
-	}
+	},
+	telemetry: false
 }
