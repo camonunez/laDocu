@@ -3,7 +3,7 @@ import Vue from 'vue'
 import isEmail from 'validator/lib/isEmail'
 import phoneValidator from 'phone'
 import { customAlphabet } from 'nanoid'
-import parameterize from './utilidades/parameterize'
+import parameterize from './parameterize'
 
 
 

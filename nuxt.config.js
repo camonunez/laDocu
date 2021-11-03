@@ -26,7 +26,8 @@ export default {
 		]
 	},
 	css: [
-		'ant-design-vue/dist/antd.css'
+		'ant-design-vue/dist/antd.css',
+		'~/style/base'
 	],
 	plugins: [
 		'~/plugins/antd-ui',

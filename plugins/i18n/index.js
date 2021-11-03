@@ -1,11 +1,12 @@
 import Vue from 'vue'
-import {_} from './lodash'
 
-import extend from './utilidades/extendAppMixin'
-import { consolo } from './consolo'
-import en from './i18n/en-us'
-import es from './i18n/es-cl'
-import pt from './i18n/pt-br'
+import extend from '../utilidades/extendAppMixin'
+import {_} from '../lodash'
+import { consolo } from '../consolo'
+
+import en from './en-us'
+import es from './es-cl'
+import pt from './pt-br'
 
 function obtenerTraduccionesLocales (componente) {
 	const { $options } = componente

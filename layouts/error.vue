@@ -1,37 +1,46 @@
 <template lang="pug">
 .plantillaError
+
+	//- .imagen(style="background-image: url('/img/tornado-fuego.jpg')")
+	//- .emoji 💨
+	OsoCoder
+
 	.error
 		.error404(v-if="error.statusCode === 404")
 			h1(:title="$t('noEncontrada')") {{ $t('noEncontrada') }}
 		.otro(v-else)
 			h1(:title="$t('haOcurridoUnError')") {{ $t('haOcurridoUnError') }} 
+
 	.alternativas
 		NuxtLink(to="/") {{ $t('paginaDeInicio') }}
 </template>
 
 <script>
 export default {
-	layout: 'error',
+	name: 'Error',
+	layout: 'nada',
 	// eslint-disable-next-line
 	props: ['error'],
 	traducciones: {
 		noEncontrada: {
-			es: 'Página no encontrada',
-			en: 'Page not found'
+			es: 'No encontrada',
+			en: 'Not found'
 		},
 		haOcurridoUnError: {
-			es: 'Ha ocurrido un error',
-			en: 'An error occurred'
+			es: 'Chucha!',
+			en: 'Error!'
 		},
 
 		paginaDeInicio: {
-			es: 'Página de inicio',
+			es: 'Inicio',
 			en: 'Home page'
 		}
 	}
 }
 </script>
 <style lang="sass" scoped>
+@import '@/style/vars'
+
 .plantillaError
 	border: 1px solid red
 	min-height: 100vh	
@@ -39,11 +48,24 @@ export default {
 	flex-flow: column nowrap
 	justify-content: center
 	align-items: center
+
+	.imagen
+		width: 10em
+		height: 10em
+		+bgcov
+	
+	.emoji
+		font-size: 4em
+
+	// .osoCoder
+		opacity: .5
+
 	.error
 		h1
 			position: relative
 			z-index: 0
 			mix-blend-mode: multiply
+			margin: 1em
 
 			&::after,
 			&::before
@@ -58,12 +80,12 @@ export default {
 			$distancia: .75em
 			&::before
 				transform: translate(-$distancia, -$distancia) 
-				color: #d66ba0
+				color: #96c3ce
 				z-index: -2
-			color: #f4e4ba
+			color: #a79ab2
 			&::after
 				transform: translate($distancia, $distancia) 
-				color: #9df7e5
+				color: #b57ba6
 				z-index: -1
 
 					

@@ -1,13 +1,12 @@
 <template lang="pug">
 a-config-provider(:locale="localeAnt")
-	div
-		b asdfasdf
-		Nuxt
+	Nuxt
 </template>
 <script>
 
 import esEs from 'ant-design-vue/lib/locale-provider/es_ES'
 export default {
+	name: 'Nada',
 	computed: {
 		localeAnt () { return esEs }
 	}
