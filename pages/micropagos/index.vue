@@ -3,7 +3,7 @@
   h1 GO5 - API X
   ul
     li 
-      n-link(to="/go5-apix/reservacion") Reservación
+      n-link(to="/go5/reservacion") Reservación
 </template>
 <script>
 export default {}

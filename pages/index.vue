@@ -3,7 +3,7 @@
   h1 Index
   ul
     li 
-      n-link(to="/go5-apix") GO5 - API X 
+      n-link(to="/go5") GO5 - API X 
       
 </template>
 

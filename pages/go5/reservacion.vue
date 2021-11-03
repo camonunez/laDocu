@@ -76,8 +76,6 @@
 		| function calcularPosibilidade () {};
 		| const asdf = 3;
 		| calcularPosibilidade.sDeReserva(Gimnasio, Usuario.membresias, { claseID, horarioID, fecha }, opciones = {})
-	pre asd
-	code.javascript(v-highlight="codigo") {{codigo}}
 </template>
 <script>
 const codigo = `function calcularPosibilidade () {};
