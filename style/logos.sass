@@ -1,0 +1,26 @@
+@import "vars"
+
+$iconos: logoGo boxmagicIcono
+
+.ologo
+	flex: auto 0 0
+	display: inline-block
+	width: 1em
+	height: 1em
+	&, &.b
+		+bgcon
+	&.m
+		+micon
+		background-color: currentColor
+
+	&.nada,
+	&.vacio
+		background-color: transparent
+
+	&.logoGo
+		$loc: '/logos/logoGo.svg'
+		background-image: url($loc)
+		width: 1.76em
+	&.boxmagicIcono
+		$loc: '/logos/boxmagicIcono.svg'
+		background-image: url($loc)

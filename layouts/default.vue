@@ -1,7 +1,7 @@
 <template lang="pug">
 a-config-provider(:locale="localeAnt")
 	div
-		b asdfasdf
+		Menu
 		Nuxt
 </template>
 <script>

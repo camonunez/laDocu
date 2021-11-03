@@ -27,7 +27,9 @@ export default {
 	},
 	css: [
 		'ant-design-vue/dist/antd.css',
-		'~/style/base'
+		'~/style/base',
+		'~/style/iconos',
+		'~/style/logos'
 	],
 	plugins: [
 		'~/plugins/antd-ui',
@@ -37,7 +39,6 @@ export default {
 		'~/plugins/lodash',
 		'~/plugins/prism',
 		'~/plugins/utilidades'
-		// { src: '~/plugins/prism', mode: 'client' }
 	],
 	components: true,
 	buildModules: [

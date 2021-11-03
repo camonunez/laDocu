@@ -66,7 +66,6 @@ export default {
 <style lang="sass" scoped>
 
 @keyframes read 
-	0%
 	100%
 		transform: translate(0, -283.5px) 
 .osoCoder

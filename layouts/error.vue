@@ -13,6 +13,7 @@
 
 	.alternativas
 		NuxtLink(to="/") {{ $t('paginaDeInicio') }}
+		a-button(@click="$router.push('/')") {{ $t('paginaDeInicio') }}
 </template>
 
 <script>
