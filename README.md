@@ -2,11 +2,11 @@
 
 *Documentation, documentation everywhere*  ✨
 
-
-## Como funciona la cosa (El repo? paquete? �? app? ... ya, app.)
-
 ![tests](https://github.com/camonunez/laDocu/actions/workflows/ci.yml/badge.svg)
 ![produccion](https://github.com/camonunez/laDocu/actions/workflows/deploy.yml/badge.svg)
+
+
+## Como funciona la cosa (El repo? paquete? �? app? ... ya, app.)
 
 ```bash
 # Se preparan las dependencias necesarias con
