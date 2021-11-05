@@ -28,7 +28,8 @@ module.exports = {
 		'import/no-webpack-loader-syntax': 'off',
 		'prefer-promise-reject-errors': 'off',
 		'no-throw-literal': 'off',
-		'no-multiple-empty-lines': 'off'
+		'no-multiple-empty-lines': 'off',
+		'vue/multi-word-component-names': 'off'
 	}
 }
 
