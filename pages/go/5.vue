@@ -1,9 +1,9 @@
 <template lang="pug">
 .subplantilla.subplantillaGo5
 	.barraLinks
-		.link
-			n-link(to="/go/5/reservacion") Reservación
-	n-child
+		n-link.link(to="/go/5/estructuraDeDatos") Estructura de datos
+		n-link.link(to="/go/5/flujosReservas") Flujos de reservas
+	n-child.hijo
 </template>
 <script>
 export default {}
@@ -19,4 +19,14 @@ export default {}
 	top: $alturaMenu
 
 	display: flex
+	.link
+		display: block
+		margin: 0 .5em
+		+fwb
+
+.hijo
+	margin: 0 auto
+	width: 900px
+	max-width: 100%
+	padding: 2em
 </style>

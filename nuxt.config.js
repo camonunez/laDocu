@@ -83,7 +83,8 @@ const nuxtConfig = {
 
 	googleFonts: {
 		families: {
-			'Caveat': [400]
+			'Caveat': [400],
+			'Nunito': [200,400, 600, 800]
 		}
 	}
 }

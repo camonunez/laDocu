@@ -102,8 +102,8 @@ export default {
 </script>
 <style lang="sass" scoped>
 @import '@/style/vars'
-.paginaApiXIndex
-	padding: 5em
+// .paginaApiXIndex
+
 .funcion
 	+ .funcion
 		margin-top: 3em

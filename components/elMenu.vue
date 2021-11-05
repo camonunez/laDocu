@@ -14,9 +14,10 @@
 
 		a-sub-menu
 			span.submenu-title-wrapper(slot='title')
-				a-icon(type=' ologo logoGo') 
+				n-link(to="/go/5")
+					a-icon(type=' ologo logoGo') 
 
-			a-menu-item(key='go5')
+			//a-menu-item(key='go5')
 				n-link(to="/go/5") index
 
 			a-menu-item(key='go5-reservacion')

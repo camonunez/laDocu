@@ -2,7 +2,7 @@
 a-config-provider(:locale="localeAnt")
 	div
 		.unaPantallaDeAlturaOMas
-			Menu.elMenu
+			ElMenu.elMenu
 			Nuxt.elContenido
 		PieDePagina.elPie
 </template>
