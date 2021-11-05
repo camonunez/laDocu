@@ -2,8 +2,9 @@
 .componenteMenu
 	a-menu(v-model='current' mode='horizontal')
 
-		a-menu-item(key='mail' disabled)
-			b La Docu
+		a-menu-item(key='home')
+			n-link(to="/")
+				b La Docu
 
 		//a-menu-item(key='actual' disabled)
 			| | {{$route.name}} |
@@ -16,10 +17,10 @@
 				a-icon(type=' ologo logoGo') 
 
 			a-menu-item(key='go5')
-				n-link(to="/go5") index
+				n-link(to="/go/5") index
 
 			a-menu-item(key='go5-reservacion')
-				n-link(to="/go5/reservacion")  Reservacion
+				n-link(to="/go/5/reservacion")  Reservacion
 
 			//a-menu-item-group(title='Item 2')
 				a-menu-item(key='setting:3')
@@ -56,9 +57,11 @@ export default {
 };
 </script>
 <style lang="sass" scoped>
+@import '@/style/vars'
 .componenteMenu
 	background-color: #333
 	display: flex
+	height: $alturaMenu
 	// justify-content: space-between
 	.separador
 		flex: auto 1 1

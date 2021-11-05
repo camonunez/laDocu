@@ -1,8 +1,9 @@
 <template lang="pug">
 a-config-provider(:locale="localeAnt")
-	div
-		Menu
-		Nuxt
+	div.loEscrolleable
+		Menu.elMenu
+		Nuxt.elContenido
+		PieDePagina
 </template>
 <script>
 
@@ -14,5 +15,10 @@ export default {
 }
 </script>
 <style lang="sass" scoped>
+@import '@/style/vars'
+.elMenu
+	position: sticky
+	top: 0
+// .elContenido
 
 </style>
