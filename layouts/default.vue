@@ -1,9 +1,10 @@
 <template lang="pug">
 a-config-provider(:locale="localeAnt")
-	div.loEscrolleable
-		Menu.elMenu
-		Nuxt.elContenido
-		PieDePagina
+	div
+		.unaPantallaDeAlturaOMas
+			Menu.elMenu
+			Nuxt.elContenido
+		PieDePagina.elPie
 </template>
 <script>
 
@@ -16,9 +17,17 @@ export default {
 </script>
 <style lang="sass" scoped>
 @import '@/style/vars'
-.elMenu
-	position: sticky
-	top: 0
-// .elContenido
+.unaPantallaDeAlturaOMas
+	min-height: 100vh
+	display: flex
+	flex-flow: column nowrap
+	.elMenu
+		flex: auto 0 0
+		position: sticky
+		top: 0
+	.elContenido
+		flex: auto 1 0
+.elPie
+	flex: auto 0 0
 
 </style>

@@ -83,7 +83,7 @@ const nuxtConfig = {
 
 	googleFonts: {
 		families: {
-			'DM+Sans': true
+			'Caveat': [400]
 		}
 	}
 }
