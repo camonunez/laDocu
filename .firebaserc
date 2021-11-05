@@ -1,5 +1,14 @@
 {
   "projects": {
     "default": "ladocu"
+  },
+  "targets": {
+    "ladocu": {
+      "hosting": {
+        "produccion": [
+          "ladocu"
+        ]
+      }
+    }
   }
 }
