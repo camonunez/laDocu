@@ -1,9 +1,9 @@
-name: Subida a firebase hosting:produccion
+name: Deploy a produccion
 
 on:
   workflow_run:
     workflows: ["Pruebas"]
-    branches: [main, master]
+    branches: [master]
     types: 
       - completed
 
