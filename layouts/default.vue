@@ -1,8 +1,10 @@
 <template lang="pug">
 a-config-provider(:locale="localeAnt")
 	div
-		Menu
-		Nuxt
+		.unaPantallaDeAlturaOMas
+			ElMenu.elMenu
+			Nuxt.elContenido
+		PieDePagina.elPie
 </template>
 <script>
 
@@ -14,5 +16,18 @@ export default {
 }
 </script>
 <style lang="sass" scoped>
+@import '@/style/vars'
+.unaPantallaDeAlturaOMas
+	min-height: 100vh
+	display: flex
+	flex-flow: column nowrap
+	.elMenu
+		flex: auto 0 0
+		position: sticky
+		top: 0
+	.elContenido
+		flex: auto 1 0
+.elPie
+	flex: auto 0 0
 
 </style>

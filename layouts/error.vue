@@ -14,6 +14,7 @@
 	.alternativas
 		NuxtLink(to="/") {{ $t('paginaDeInicio') }}
 		a-button(@click="$router.push('/')") {{ $t('paginaDeInicio') }}
+	PieDePagina
 </template>
 
 <script>

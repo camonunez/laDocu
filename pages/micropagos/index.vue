@@ -1,9 +1,6 @@
 <template lang="pug">
 .pagina.paginaIndex
-  h1 GO5 - API X
-  ul
-    li 
-      n-link(to="/go5/reservacion") Reservación
+  h1 Micropagos
 </template>
 <script>
 export default {}

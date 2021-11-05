@@ -1,17 +1,64 @@
+@import './vars'
 
 html
-	color: #2e2f2f
-	background-color: #cddddd
 	body
+		color: #06070E
+		background-color: #ededed
 		height: auto
 	a
-		color: #0f5257
+		color: #064789
 		&:visited
-			color: #0b3142
-		&:active
-			color: #0f5257
+			color: #03264A
+		&:active,
+		&.nuxt-link-active
+			color: #096FD6
 
 .emoji
 	opacity: .75
 	font-weight: 400
 	font-family: apple color emoji,segoe ui emoji,noto color emoji,android emoji,emojisymbols,emojione mozilla,twemoji mozilla,segoe ui symbol
+
+.flex
+	display: flex
+	&.jcc
+		justify-content: center
+	&.jcsb
+		justify-content: space-between
+	&.jcsa
+		justify-content: space-around
+	&.jcfs
+		justify-content: flex-start
+	&.jcfe
+		justify-content: flex-end
+	&.aic
+		align-items: center
+	&.aife
+		align-items: flex-end
+	&.aifs
+		align-items: flex-start
+	&.aib
+		align-items: baseline
+
+.tac
+	text-align: center
+.ta, .tal
+	text-align: left
+.tar
+	text-align: right
+
+.black
+	+black
+.bold
+	+bold
+.normal
+	+normal
+.light
+	+light
+.fwbb
+	+fwbb
+.fwb
+	+fwb
+.fwn
+	+fwn
+.fwl
+	+fwl
