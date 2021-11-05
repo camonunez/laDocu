@@ -1,4 +1,4 @@
-name: Subida a firebase hosting:produccion
+name: Deploy a produccion
 
 on:
   workflow_run:
