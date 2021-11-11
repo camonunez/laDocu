@@ -12,22 +12,9 @@
 		a-menu-item(key='micropagos')
 			n-link(to="/micropagos") MicroPagos
 
-		a-sub-menu
-			span.submenu-title-wrapper(slot='title')
-				n-link(to="/go/5")
-					a-icon(type=' ologo go') 
-
-			//a-menu-item(key='go5')
-				n-link(to="/go/5") index
-
-			a-menu-item(key='go5-reservacion')
-				n-link(to="/go/5/reservacion")  Reservacion
-
-			//a-menu-item-group(title='Item 2')
-				a-menu-item(key='setting:3')
-					| Option 3
-				a-menu-item(key='setting:4')
-					| Option 4
+		a-menu-item(key='go-5')
+			n-link(to="/go/5")
+				a-icon(type=' ologo go') 
 
 		
 
@@ -41,7 +28,7 @@
 export default {
 	data() {
 		return {
-			current: ['mail'],
+			current: [],
 			// links: {
 			// 	go5
 			// }
@@ -49,11 +36,14 @@ export default {
 	},
 	watch: {
 		$route (v) {
-			this.current = [v.name]
+			if (this.current.length === 1 && this.current[0] !== v.name && v.name.startsWith(`${this.current[0]}-`)) return
+			if (v.name.startsWith("go-5-")) this.current = ['go-5']
+			else this.current = [v.name]
 		}
 	},
 	mounted () {
-		this.current = [this.$route.name]
+		if (this.$route.name.startsWith("go-5-")) this.current = ['go-5']
+		else this.current = [this.$route.name]
 	}
 };
 </script>
