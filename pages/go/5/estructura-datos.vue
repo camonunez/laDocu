@@ -46,11 +46,6 @@ export default {
 .paginaEstructuraDeDatos
 	.contenido
 		// border: 1px solid red
-		.ancla
-			//border: 1px solid cyan
-			//padding: 0.2em
-			position: relative
-			top: calc(-2em - $alturaMenu)
 		.encabezado
 			padding-bottom: 2em
 		section

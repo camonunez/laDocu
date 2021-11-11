@@ -4,27 +4,35 @@
 		h2 Nueva estructura de datos
 
 
-	#CodigoGimnasio
+	#CodigoGimnasio.ancla
 	.bloque
 		.pretitulo.mongoDB(title="MongoDB") Colección: Gimnasios
 		h3.titulo Gimnasio
 		.codigos
 			CodigoGimnasio
 
-	#CodigoPerfil
+	#CodigoPerfil.ancla
 	.bloque
 		.pretitulo.mongoDB(title="MongoDB") Colección: Perfiles
 		h3.titulo Perfil
 		.codigos
 			CodigoPerfil
 
+	#CodigoInstancia.ancla
+	.bloque
+		.pretitulo.mongoDB(title="MongoDB") Colección: Instancias de un gimnasio
+		h3.titulo Instancia
+		.codigos
+			CodigoInstancia
+
 
 </template>
 <script>
 import CodigoGimnasio from './codigoGimnasio.vue'
 import CodigoPerfil from './codigoPerfil.vue'
+import CodigoInstancia from './codigoInstancia.vue'
 export default {
-	components: { CodigoGimnasio, CodigoPerfil },
+	components: { CodigoGimnasio, CodigoPerfil, CodigoInstancia },
 	methods: {}
 }
 </script>
