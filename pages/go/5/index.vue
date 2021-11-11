@@ -1,7 +1,8 @@
 <template lang="pug">
 .pagina.paginaIndex
 	.contenido
-		h1 Reservas potenciadas por el 🌞
+		h1 Reservas modularizadas y rediseñadas.
+		p 
 </template>
 <script>
 export default {
