@@ -4,7 +4,7 @@
 
 		//- .imagen(style="background-image: url('/img/tornado-fuego.jpg')")
 		//- .emoji 💨
-		OsoCoder
+		VisualesOsoCoder
 
 		.error
 			.error404(v-if="error.statusCode === 404")

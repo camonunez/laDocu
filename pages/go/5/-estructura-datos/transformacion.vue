@@ -77,6 +77,7 @@ export default {
 			+black
 		.mongoDB
 			color: #589636
+			+bold
 	.tablas
 		z-index: 1
 		// border: 2px dashed gray

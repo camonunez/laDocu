@@ -1,6 +1,7 @@
 <template lang="pug">
 .subplantilla.subplantillaGo5
 	.fondo
+		.imagen
 	.navegador
 		n-link.link(to="/go/5/estructura-datos") Estructura de datos
 		router-link(to='/go/5/estructura-datos' v-slot='{ href, route, navigate, isActive, isExactActive }' custom)
@@ -29,18 +30,28 @@ export default {}
 		top: 0
 		align-self: flex-start // Fix para que funque el sticky con flex
 		// height: calc(100vh - $alturaMenu)
-		&::before
+		// perspective: 1px
+		// perspective-origin: 100% 100%
+		.imagen
 			content: ''
 			display: block
 			position: absolute
+			// top: $alturaMenu
 			top: 0
 			left: 0
 			width: 100vw
 			height: 100vh
-			+bgcov
-			background-image: url(/img/nubes.svg)
-			// background-attachment: fixed
-			opacity: .7
+			// height: calc(100vh - $alturaMenu)
+			&::before
+				content: ''
+				display: block
+				width: 100%
+				height: 100%
+				+bgcov
+				background-image: url(/img/nubes.svg)
+				// background-attachment: fixed
+				opacity: .7
+				
 
 	.navegador
 		z-index: 2
