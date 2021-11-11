@@ -8,7 +8,6 @@
 		.pretitulo.mongoDB(title="MongoDB") Colección: Gimnasios
 		h3.titulo Gimnasio
 		.codigos
-
 			CodigoGimnasio
 
 
