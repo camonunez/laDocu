@@ -10,7 +10,12 @@
 					a.linkSeccion(href="#antigua") Antigua estructura
 					a.linkSeccion(href="#transformacion") Reestructuración
 					a.linkSeccion(href="#cambiosAdicionales") Cambios adicionales
+					
 					a.linkSeccion(href="#nueva") Nueva estructura
+					a.linkSeccion.sublink(href="#CodigoGimnasio") Gimnasio
+					a.linkSeccion.sublink(href="#CodigoPerfil") Perfil
+					a.linkSeccion.sublink(href="#CodigoInstancia") Instancia
+
 					a.linkSeccion(href="#ventajasDesventajas") Ventajas y desventajas
 
 		n-link.link(to="/go/5/flujos-reservas") Flujos de reservas
@@ -82,6 +87,8 @@ export default {}
 				max-height: 0
 			.linkSeccion
 				display: block
+				&.sublink
+					padding-left: 1em
 
 
 	.hijo

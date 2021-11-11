@@ -4,12 +4,14 @@
 		h2 Nueva estructura de datos
 
 
+	#CodigoGimnasio
 	.bloque
 		.pretitulo.mongoDB(title="MongoDB") Colección: Gimnasios
 		h3.titulo Gimnasio
 		.codigos
 			CodigoGimnasio
 
+	#CodigoPerfil
 	.bloque
 		.pretitulo.mongoDB(title="MongoDB") Colección: Perfiles
 		h3.titulo Perfil
