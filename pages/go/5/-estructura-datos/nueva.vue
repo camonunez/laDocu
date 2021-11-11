@@ -9,17 +9,14 @@
 		h3.titulo Gimnasio
 		.codigos
 
-			Codigo.
-				calcularPosibilidadesDeReserva(Gimnasio, Usuario.membresias, { claseID, horarioID, fecha }, opciones = {})
+			CodigoGimnasio
 
 
 </template>
 <script>
+import CodigoGimnasio from './codigoGimnasio.vue'
 export default {
-	data() {
-		return {}
-	},
-	computed: {},
+	components: { CodigoGimnasio },
 	methods: {}
 }
 </script>

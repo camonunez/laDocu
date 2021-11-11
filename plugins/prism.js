@@ -11,6 +11,7 @@ import 'prism-themes/themes/prism-atom-dark.css'
 // // Include language support: (optional)
 // import 'prismjs/components/prism-scss'
 // import 'prismjs/components/prism-markup'
+import 'prismjs/components/prism-json'
 // import 'prismjs/components/prism-ruby'
 
 // // Include the toolbar plugin: (optional)

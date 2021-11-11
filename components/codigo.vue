@@ -1,8 +1,9 @@
 <template lang="pug">
 .rootPrism
-	pre.line-numbers(:class="`language-${lang}`")
-		code
-			slot
+	client-only
+		pre.line-numbers(:class="`language-${lang}`")
+			code
+				slot
 </template>
 <script>
 // import {Prism} from '~/plugins/prism'
