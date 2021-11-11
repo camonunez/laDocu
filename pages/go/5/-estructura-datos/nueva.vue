@@ -10,12 +10,19 @@
 		.codigos
 			CodigoGimnasio
 
+	.bloque
+		.pretitulo.mongoDB(title="MongoDB") Colección: Perfiles
+		h3.titulo Perfil
+		.codigos
+			CodigoPerfil
+
 
 </template>
 <script>
 import CodigoGimnasio from './codigoGimnasio.vue'
+import CodigoPerfil from './codigoPerfil.vue'
 export default {
-	components: { CodigoGimnasio },
+	components: { CodigoGimnasio, CodigoPerfil },
 	methods: {}
 }
 </script>
