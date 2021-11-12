@@ -61,6 +61,10 @@
 			.tabla(v-for='nombre in "roles pais".split(" ")')
 				.nombreTabla {{ nombre }}
 				.placeholderFilas ...
+
+
+	.pieConLinks.flex.jcfe
+		n-link.linkSeccion(to="/go/5/estructura-datos/cambiosAdicionales") Cambios adicionales
 </template>
 <script>
 export default {

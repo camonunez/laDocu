@@ -71,6 +71,9 @@
 			.nombreTabla pago_mensualidad
 			.placeholderFilas ...
 
+	.pieConLinks.flex.jcfe
+		n-link.linkSeccion(to="/go/5/estructura-datos/transformacion") Reestructuración
+
 
 </template>
 <script>

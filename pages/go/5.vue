@@ -7,16 +7,16 @@
 		router-link(to='/go/5/estructura-datos' v-slot='{ href, route, navigate, isActive, isExactActive }' custom)
 			transition(:duration="300")
 				.linksSeccion(v-if="isActive")
-					a.linkSeccion(href="#antigua") Antigua estructura
-					a.linkSeccion(href="#transformacion") Reestructuración
-					a.linkSeccion(href="#cambiosAdicionales") Cambios adicionales
+					n-link.linkSeccion(to="/go/5/estructura-datos/antigua") Antigua estructura
+					n-link.linkSeccion(to="/go/5/estructura-datos/transformacion") Reestructuración
+					n-link.linkSeccion(to="/go/5/estructura-datos/cambiosAdicionales") Cambios adicionales
 					
-					a.linkSeccion(href="#nueva") Nueva estructura
-					a.linkSeccion.sublink(href="#CodigoGimnasio") Gimnasio
-					a.linkSeccion.sublink(href="#CodigoPerfil") Perfil
-					a.linkSeccion.sublink(href="#CodigoInstancia") Instancia
+					n-link.linkSeccion(to="/go/5/estructura-datos/nueva") Nueva estructura
+					n-link.linkSeccion.sublink(to="/go/5/estructura-datos/nueva#CodigoGimnasio") Gimnasio
+					n-link.linkSeccion.sublink(to="/go/5/estructura-datos/nueva#CodigoPerfil") Perfil
+					n-link.linkSeccion.sublink(to="/go/5/estructura-datos/nueva#CodigoInstancia") Instancia
 
-					a.linkSeccion(href="#ventajasDesventajas") Ventajas y desventajas
+					n-link.linkSeccion(to="/go/5/estructura-datos/ventajasDesventajas") Ventajas y desventajas
 
 		n-link.link(to="/go/5/flujos-reservas") Flujos de reservas
 
