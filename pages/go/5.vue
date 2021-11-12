@@ -87,6 +87,7 @@ export default {}
 				max-height: 0
 			.linkSeccion
 				display: block
+				margin: 0.25em 0
 				&.sublink
 					padding-left: 1em
 
