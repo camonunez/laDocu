@@ -63,8 +63,11 @@
 				.placeholderFilas ...
 
 
-	.pieConLinks.flex.jcfe
-		n-link.linkSeccion(to="/go/5/estructura-datos/cambiosAdicionales") Cambios adicionales
+	.pieConLinks
+		.flex.jcfe
+			n-link.linkSeccion(to="/go/5/estructura-datos/cambiosAdicionales") 
+				| Cambios adicionales
+				span.oicono.adelante
 </template>
 <script>
 export default {

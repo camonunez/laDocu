@@ -26,13 +26,15 @@
 			CodigoInstancia
 
 	.pieConLinks.flex.jcfe
-		n-link.linkSeccion(to="/go/5/estructura-datos/ventajasDesventajas") Ventajas y desventajas
+		n-link.linkSeccion(to="/go/5/estructura-datos/ventajasDesventajas") 
+			| Ventajas y desventajas
+			span.oicono.adelante
 
 </template>
 <script>
-import CodigoGimnasio from './codigoGimnasio.vue'
-import CodigoPerfil from './codigoPerfil.vue'
-import CodigoInstancia from './codigoInstancia.vue'
+import CodigoGimnasio from './-codigoGimnasio.vue'
+import CodigoPerfil from './-codigoPerfil.vue'
+import CodigoInstancia from './-codigoInstancia.vue'
 export default {
 	components: { CodigoGimnasio, CodigoPerfil, CodigoInstancia },
 	methods: {}

@@ -12,8 +12,11 @@
 		p Se permite establecer un período (fecha - fecha) durante el cual la clase se impartirá. Fuera de tal período, la clase funcionará tal como si estuviera desactivada. Desactivar la clase vía el campo "activa" aún desactiva la clase por completo.
 
 
-	.pieConLinks.flex.jcfe
-		n-link.linkSeccion(to="/go/5/estructura-datos/nueva") Nueva estructura
+	.pieConLinks
+		.flex.jcfe
+			n-link.linkSeccion(to="/go/5/estructura-datos/nueva") 
+				| Nueva estructura
+				span.oicono.adelante
 </template>
 <script>
 export default {

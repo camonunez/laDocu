@@ -5,8 +5,11 @@
 			h1 Estructura de datos
 			p 
 
-	.pieConLinks.flex.jcfe
-		n-link.linkSeccion(to="/go/5/estructura-datos/transformacion") Reestructuración
+	.pieConLinks
+		.flex.jcfe
+			n-link.linkSeccion(to="/go/5/estructura-datos/transformacion")
+				| Reestructuración
+				span.oicono.adelante
 
 	.fin
 

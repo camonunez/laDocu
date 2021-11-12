@@ -5,8 +5,9 @@
 			h1 Estructura de datos
 			p 
 
-	.pieConLinks.flex.jcfe
-		n-link.linkSeccion(to="/go/5/estructura-datos/antigua") Antigua estructura
+	.pieConLinks
+		.flex.jcfe
+			n-link.linkSeccion(to="/go/5/estructura-datos/antigua") Antigua estructura
 
 
 

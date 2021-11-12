@@ -93,9 +93,11 @@ export default {}
 
 
 	.hijo
+		// width: 900px
+		min-width: 0
+		max-width: 100%
+		flex: 900px 1 1
 		z-index: 1
 		margin: 0 auto
-		width: 900px
-		max-width: 100%
 		padding: 2em
 </style>
