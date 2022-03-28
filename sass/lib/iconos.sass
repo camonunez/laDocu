@@ -1,0 +1,41 @@
+@import './vars'
+
+$carpetaIconos: '/svg/sociales'
+
+$mini: check cruz mas ojo play chevron flecha menos pausa triangulo
+$genericos: escribir firmar llave lupa ojo reloj
+
+$setsIconos: (mini: $mini, genericos: $genericos)
+
+.oicono
+	flex: auto 0 0
+	display: inline-block
+	width: 1em
+	height: 1em
+	position: relative
+
+	&.b
+		+bgcon
+	&, &.m
+		&::after
+			+micon
+			background-color: currentColor
+
+		&.flipY
+			transform: scaleX(-1)
+
+	@each $carpeta, $iconos in $setsIconos
+		@each $icono in $iconos
+			&.#{$icono}
+				&::after
+					content: ''
+					display: block
+					position: absolute
+					top: 0
+					left: 0
+					// width: inherit
+					// height: inherit
+					right: 0
+					bottom: 0
+					$loc: '/iconos/#{$carpeta}/#{$icono}.svg'
+					mask-image: url($loc)

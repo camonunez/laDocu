@@ -16,18 +16,23 @@ export default {
 }
 </script>
 <style lang="sass" scoped>
-@import '@/style/vars'
+@import '@sass/comun'
 .unaPantallaDeAlturaOMas
 	min-height: 100vh
 	display: flex
 	flex-flow: column nowrap
+	z-index: 0
 	.elMenu
 		flex: auto 0 0
 		position: sticky
 		top: 0
+		z-index: 200
 	.elContenido
+		position: relative
 		flex: auto 1 0
+		z-index: 0
 .elPie
-	flex: auto 0 0
+	position: relative
+	z-index: 100
 
 </style>

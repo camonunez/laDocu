@@ -6,13 +6,37 @@
 	],
 	"settings": {
 		"workbench.colorCustomizations": {
-			"activityBar.background": "#727D71",
-			"activityBar.foreground": "#DCC9B6",
-			"titleBar.activeBackground": "#ABC4AB",
-			"titleBar.activeForeground": "#333"
+			// "titleBar.activeForeground": "#8BB8A8",
+			"activityBar.foreground": "#E1DD8F",
+			// "statusBar.foreground": "#000",
+			"activityBar.background": "#171512",
+			"sideBar.background": "#171512",
+			"sideBar.foreground": "#fff",
+
+			// "editor.selectionBackground": "#101f19",
+			// "editor.selectionHighlightBackground": "#101f19",
+
+			"titleBar.activeBackground": "#000",
+			"editor.background": "#191919",
+			"statusBar.background": "#000",
+			"terminal.background": "#111"
 		},
+		"window.title": "La Docu ${separator}${activeEditorShort}",
+
 		"gitlens.currentLine.enabled": true,
 		"gitlens.hovers.currentLine.over": "line",
-		"window.title": "${folderName}@${rootName}${separator}${activeEditorShort}"
+
+		"editor.codeActionsOnSave": {
+			"source.fixAll": true
+		},
+		"[json]": {
+			"editor.defaultFormatter": "vscode.json-language-features"
+		},
+		"[javascript]": {
+			"editor.defaultFormatter": "esbenp.prettier-vscode"
+		},
+		"[typescript]": {
+			"editor.defaultFormatter": "esbenp.prettier-vscode"
+		}
 	}
 }

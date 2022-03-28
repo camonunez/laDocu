@@ -1,7 +1,7 @@
 import Vue from 'vue'
 
 import extend from '../utilidades/extendAppMixin'
-import {_} from '../lodash'
+import { _ } from '../lodash'
 import { consolo } from '../consolo'
 
 import en from './en-us'

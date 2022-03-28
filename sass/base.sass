@@ -1,0 +1,393 @@
+
+@import './comun'
+// ANT Reset
+
+.ant-btn-primary
+	border-width: 0
+
+.ant-form-item
+	margin-bottom: 2rem
+	&:last-child
+		margin-bottom: 0
+	.ant-form-item-label
+		padding-bottom: 1rem
+		font-size: 1.4rem
+		line-height: 1
+	.ant-form-item-control
+		font-size: 1.6rem
+		line-height: 1
+		.ant-form-explain
+			margin-top: 0.5rem
+
+	.ant-input
+		font-size: 1.4rem
+
+.ant-modal-root
+	.ant-modal-body
+		+anchoWrapper
+		padding: 2rem
+.ant-modal-body
+	padding: 0
+	.ant-modal-confirm-body-wrapper
+		+anchoComun
+.ant-modal-mask
+	backdrop-filter: blur(4px)
+.ant-modal-content
+	background-color: $blanco
+
+.ant-modal-confirm
+	.ant-modal-confirm-body
+		.ant-modal-confirm-content
+			margin-top: 1rem
+	.ant-modal-confirm-btns .ant-btn
+		+anchoComun
+
+.ant-checkbox-wrapper
+	display: flex
+	align-items: flex-start
+	> span
+		flex: auto 1 1
+		line-height: 1.2
+	> .ant-checkbox
+		display: block
+		flex: auto 0 0
+		margin-right: .4rem
+
+//
+//
+//
+
+//
+//
+// General
+*
+	margin: 0
+	padding: 0
+	// font-family: "Roboto Slab"
+	// font-display: swap
+	// font-size: 15px
+html
+	font-size: 10px !important
+	font-family: 'Inconsolata', sans-serif
+
+	.aMano
+		font-family: 'Reenie Beanie', sans-serif
+		+regular
+
+body
+	font-size: 1.4rem
+	min-height: 100vh
+	color: $colorBody
+	background-color: $fondoBody
+
+a
+	color: inherit
+	text-decoration: none
+	&:visited, &:active, &:hover,
+	&:-webkit-any-link
+		color: inherit
+
+strong, b
+	+medium
+
+.noMovil
+	+movil
+		display: none
+
+.noCompu
+	+compu
+		display: none
+
+.light
+	+light
+.regular
+	+regular
+.medium
+	+medium
+.bold
+	+bold
+.black
+	+black
+
+//
+
+.radio
+	+radio
+.radio2
+	+radio2
+.radio3
+	+radio3
+
+.sombra
+	+sombra
+
+.sombra2
+	+sombra2
+
+.sombra3
+	+sombra3
+
+.circulo
+	width: 1em
+	height: 1em
+	border-radius: 1em
+	line-height: 0
+
+//
+// Colores basicos
+
+.colorPrimario
+	color: $primario
+.colorAcento
+	color: $acento
+.colorSecundario
+	color: $secundario
+.colorExito
+	color: $exito
+.colorAtencion
+	color: $atencion
+.colorError
+	color: $error
+.colorGris
+	color: $gris
+.colorBlanco
+	color: $blanco
+.colorNegro
+	color: $negro
+
+.fondoPrimario
+	background-color: $primario
+.fondoAcento
+	background-color: $acento
+.fondoSecundario
+	background-color: $secundario
+.fondoExito
+	background-color: $exito
+.fondoAtencion
+	background-color: $atencion
+.fondoError
+	background-color: $error
+.fondoGris
+	background-color: $gris
+.fondoBlanco
+	background-color: $blanco
+.fondoNegro
+	background-color: $negro
+//
+// Botones
+.ant-btn,
+.boton
+	display: block
+	margin: 0
+	cursor: pointer
+	padding: 0.5rem 1rem
+	min-height: 4rem
+
+	border-width: 1px
+	border-color: $primario
+	border-style: solid
+	+radio
+
+	+medium
+	font-size: 1.8rem
+
+	display: flex
+	align-items: center
+	text-align: center
+
+	background-color: $blanco
+	color: $primario
+	&:hover,
+	&:focus
+		// background-color: $acento
+		// color: $blanco
+		border-color: $acento
+
+	&.negro
+		background-color: $negro
+		color: $blanco
+		border-color: transparent
+		&:hover,
+		&:focus
+			background-color: $oscuro
+			color: $blanco
+			border-color: $secundario
+
+	&.primario,
+	&.ant-btn-primary
+		background-color: $primario
+		color: $blanco
+		&:hover
+			background-color: $primario
+			color: $blanco
+			border-color: $acento
+
+	&.acento
+		background-color: $acento
+	&.secundario
+		background-color: $secundario
+	&.exito
+		background-color: $exito
+	&.atencion
+		background-color: $atencion
+	&.error
+		background-color: $error
+
+	&.w100
+		width: 100%
+
+// 
+// 
+// Inputs
+.ant-input-affix-wrapper
+	.ant-input:not(:first-child)
+		padding-left: 34px
+
+//
+//
+// Anchos
+
+.anchoComun
+	+anchoComun
+.anchoWrapper
+	+anchoWrapper
+
+// 
+// Display
+
+.db
+	display: block
+.dib
+	display: inline-block
+
+.flex
+	display: flex
+	&.jcc
+		justify-content: center
+	&.jcsb
+		justify-content: space-between
+	&.jcsa
+		justify-content: space-around
+	&.jcfs
+		justify-content: flex-start
+	&.jcfe
+		justify-content: flex-end
+	&.aic
+		align-items: center
+
+	&.ffcn
+		flex-flow: column nowrap
+	&.ffcw
+		flex-flow: column wrap
+	&.ffrn
+		flex-flow: row nowrap
+	&.ffrw
+		flex-flow: row wrap
+
+.fa11
+	flex: auto 1 1
+.fa00
+	flex: auto 0 0
+.fa10
+	flex: auto 1 0
+.fa01
+	flex: auto 0 1
+
+.fg1
+	flex-grow: 1
+.fg0
+	flex-grow: 0
+.fs1
+	flex-grow: 1
+.fs0
+	flex-grow: 0
+
+//
+// Alineación de texto
+.tac
+	text-align: center
+.tal
+	text-align: left
+.tar
+	text-align: right
+
+//
+
+//
+// Tamaños de fuente y espaciados
+//
+
+$sizes: 1, 2, 3, 4, 5, 6, 7, 8
+
+// Tamaños de fuente
+@each $size in $sizes
+	.fz#{$size}rem
+		font-size: #{$size}rem
+
+// Paddings
+@each $size in $sizes
+	.p#{$size}rem
+		padding: #{$size}rem
+	.pt#{$size}rem
+		padding-top: #{$size}rem
+	.pb#{$size}rem
+		padding-bottom: #{$size}rem
+	.pl#{$size}rem
+		padding-left: #{$size}rem
+	.pr#{$size}rem
+		padding-right: #{$size}rem
+	.px#{$size}rem
+		padding-left: #{$size}rem
+		padding-right: #{$size}rem
+	.py#{$size}rem
+		padding-top: #{$size}rem
+		padding-bottom: #{$size}rem
+
+// Margins
+.m0a
+	margin: 0 auto
+.ma0
+	margin: auto 0
+
+@each $size in $sizes
+	.m#{$size}rem
+		margin: #{$size}rem
+	.mt#{$size}rem
+		margin-top: #{$size}rem
+	.mb#{$size}rem
+		margin-bottom: #{$size}rem
+	.ml#{$size}rem
+		margin-left: #{$size}rem
+	.mr#{$size}rem
+		margin-right: #{$size}rem
+	.mx#{$size}rem
+		margin-left: #{$size}rem
+		margin-right: #{$size}rem
+	.my#{$size}rem
+		margin-top: #{$size}rem
+		margin-bottom: #{$size}rem
+
+//
+
+//
+//
+// Cubre pantallas para overlay simple durante procesos
+.cubrePantalla
+	position: fixed
+	top: 0
+	left: 0
+	bottom: 0
+	right: 0
+	z-index: 100
+	background-color: transparentize(white, .5)
+	backdrop-filter: blur(.3rem)
+
+	display: flex
+	flex-flow: column nowrap
+	justify-content: center
+	align-items: center
+	+salir
+		opacity: 0
+
+	.ant-icon
+		font-size: 3rem
