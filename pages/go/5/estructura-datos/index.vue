@@ -25,7 +25,7 @@ export default {
 }
 </script>
 <style lang="sass" scoped>
-@import '@/style/vars'
+@import '@sass/comun'
 .paginaEstructuraDeDatos
 	.contenido
 		// border: 1px solid red

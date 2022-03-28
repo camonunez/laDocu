@@ -16,7 +16,7 @@ export default {
 }
 </script>
 <style lang="sass" scoped>
-@import '@/style/vars'
+@import '@sass/comun'
 .unaPantallaDeAlturaOMas
 	min-height: 100vh
 	display: flex

@@ -79,7 +79,7 @@ export default {
 }
 </script>
 <style lang="sass" scoped>
-@import '@/style/vars'
+@import '@sass/comun'
 .componenteDePagina
 	.bloqueBaseDatos
 		// background: hsla(0, 0%, 0%, .2)

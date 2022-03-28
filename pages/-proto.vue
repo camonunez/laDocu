@@ -6,5 +6,5 @@
 export default {}
 </script>
 <style lang="sass" scoped>
-@import '@/style/vars'
+@import '@sass/comun'
 </style>

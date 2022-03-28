@@ -1,10 +1,10 @@
-
-const dev = (process.env.MODO === 'dev')
+import path from 'path'
+import antdVars from './antdv/vars'
+const dev = ( process.env.MODO === 'dev' )
 
 const nuxtConfig = {
 	server: {
 		port: 3024,
-		host: '0.0.0.0',
 		timing: false
 	},
 	env: {
@@ -26,10 +26,8 @@ const nuxtConfig = {
 		]
 	},
 	css: [
-		'ant-design-vue/dist/antd.css',
-		'~/style/base',
-		'~/style/iconos',
-		'~/style/logos'
+		{ src: 'ant-design-vue/dist/antd.less', lang: 'less' },
+		'~/sass/base'
 	],
 	plugins: [
 		'~/plugins/antd-ui',
@@ -75,8 +73,25 @@ const nuxtConfig = {
 	// 	}
 	// },
 
-	// Build Configuration: https://go.nuxtjs.dev/config-build
+	// Build Configuration (https://go.nuxtjs.dev/config-build)
 	build: {
+		extend ( config, ctx ) {
+			config.resolve.alias['@sass'] = path.join( __dirname, 'sass' )
+			config.resolve.alias['@lib'] = path.join( __dirname, 'lib' )
+		},
+		babel: {
+			plugins: [
+				['import', { libraryName: 'ant-design-vue', libraryDirectory: 'es', style: true }]
+			]
+		},
+		loaders: {
+			less: {
+				lessOptions: {
+					modifyVars: antdVars,
+					javascriptEnabled: true
+				}
+			}
+		}
 	},
 	telemetry: false,
 
@@ -84,7 +99,7 @@ const nuxtConfig = {
 	googleFonts: {
 		families: {
 			'Caveat': [400],
-			'Nunito': [200,400, 600, 800]
+			'Nunito': [200, 400, 600, 800]
 		}
 	}
 }

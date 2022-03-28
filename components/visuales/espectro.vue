@@ -10,7 +10,7 @@
 export default {}
 </script>
 <style lang="sass" scoped>
-@import '@/style/vars'
+@import '@sass/comun'
 .zonaLogoLaDocu
 	border: 1px solid black
 	.logoLaDocu,

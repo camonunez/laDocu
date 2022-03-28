@@ -6,7 +6,7 @@
 export default {}
 </script>
 <style lang="sass" scoped>
-@import '@/style/vars'
+@import '@sass/comun'
 .algo
 	display: block
 </style>

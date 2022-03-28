@@ -13,6 +13,6 @@
 		},
 		"gitlens.currentLine.enabled": true,
 		"gitlens.hovers.currentLine.over": "line",
-		"window.title": "${folderName}@${rootName}${separator}${activeEditorShort}"
+		"window.title": "La Docu${separator}${activeEditorShort}"
 	}
 }
