@@ -198,7 +198,6 @@ Codigo(lang="json").
 	}
 </template>
 <script>
-
 const gimnasio = {
 	_id: '1mX2PZldAS',
 	bmID: 2,
@@ -228,7 +227,8 @@ const gimnasio = {
 		telefono: '56950012660',
 		sitioWeb: 'https://www.boxmagic.cl'
 	},
-	descripcion: '<p>BoxMagic es la comunidad deportiva más grande del país. Nuestra misión es acompañar a los emprendedores en la industria del deporte e impactar en la sociedad fomentando la salud y vida sana.</p><p><strong>prueba prueba prueba</strong></p><p><strong><br></strong></p><p><strong><del>alalalal</del></strong></p>',
+	descripcion:
+		'<p>BoxMagic es la comunidad deportiva más grande del país. Nuestra misión es acompañar a los emprendedores en la industria del deporte e impactar en la sociedad fomentando la salud y vida sana.</p><p><strong>prueba prueba prueba</strong></p><p><strong><br></strong></p><p><strong><del>alalalal</del></strong></p>',
 	empresa: {
 		rut: null,
 		razonSocial: null,
@@ -251,10 +251,13 @@ const gimnasio = {
 	nombre: 'BoxMagic Gym',
 	logo: 'https://cdn.boxmagic.cl/uploads/boxes_images/isotipo_color1.png',
 	mensajes: {
-		bienvenida: '<p>Gracias por ingresar en nuestro gimnasio de prueba</p><p>asdasd</p><p>asd</p><p>dasdasd</p><hr><p>asdasd</p><p>asdasdasd</p><p><strong>asdasdasd</strong></p>',
+		bienvenida:
+			'<p>Gracias por ingresar en nuestro gimnasio de prueba</p><p>asdasd</p><p>asd</p><p>dasdasd</p><hr><p>asdasd</p><p>asdasdasd</p><p><strong>asdasdasd</strong></p>',
 		clase: {
-			antes: 'Recuerda que se enviará un email para que puedas ingresar a tu clase de prueba',
-			despues: 'Como te fue en la clase?\n\nSi tienes cualquier consulta, escribenos a hola@boxmagic.cl\n\n¿No pudiste asistir? escribenos a este email y te daremos una nueva clase de prueba'
+			antes:
+				'Recuerda que se enviará un email para que puedas ingresar a tu clase de prueba',
+			despues:
+				'Como te fue en la clase?\n\nSi tienes cualquier consulta, escribenos a hola@boxmagic.cl\n\n¿No pudiste asistir? escribenos a este email y te daremos una nueva clase de prueba'
 		}
 	},
 	perfilesSociales: {
@@ -290,7 +293,6 @@ const gimnasio = {
 		5: 'Levantamiento Olímpico'
 	},
 
-
 	clases: {
 		lOiSRvfxIh: {
 			bmID: 5978,
@@ -321,7 +323,6 @@ const gimnasio = {
 		}
 	},
 
-
 	planes: {
 		YTgFGWoewG: {
 			bmID: 198,
@@ -343,11 +344,25 @@ const gimnasio = {
 			multiplesPagos: 0,
 			multiplesPagosID: null,
 			multiplesPagosCantidad: 0,
-			programasBmIDs: [855, 856, 858, 1382, 1719, 1726, 2476, 2485, 2504, 2623, 4264, 4798],
-			programasIDs: ['sgTvJrwtNE', 'kuK22axkKE', 'rxTw7qu0YH', 'rpwq9vGHSK', 'QxShdUbNFF', 'uVWnp4WqFI', 'BKfK56vXJM', 'nzTHr46jfz', 'qSffco4JwL', 'XJ0Y2D2k1d', 'ryuKDdDssn', '8SGHQ6vg45']
+			programasBmIDs: [
+				855, 856, 858, 1382, 1719, 1726, 2476, 2485, 2504, 2623, 4264, 4798
+			],
+			programasIDs: [
+				'sgTvJrwtNE',
+				'kuK22axkKE',
+				'rxTw7qu0YH',
+				'rpwq9vGHSK',
+				'QxShdUbNFF',
+				'uVWnp4WqFI',
+				'BKfK56vXJM',
+				'nzTHr46jfz',
+				'qSffco4JwL',
+				'XJ0Y2D2k1d',
+				'ryuKDdDssn',
+				'8SGHQ6vg45'
+			]
 		}
 	},
-
 
 	programas: {
 		sgTvJrwtNE: {
@@ -359,7 +374,6 @@ const gimnasio = {
 		}
 	},
 
-
 	galeriasVideo: {
 		Ee6GiwHzHI: {
 			bmID: 37,
@@ -369,7 +383,6 @@ const gimnasio = {
 			actualizacion: { $date: '2020-10-15T15:09:17.000Z' }
 		}
 	},
-
 
 	videos: {
 		nHKGr9yL5g: {
@@ -392,11 +405,8 @@ const gimnasio = {
 		}
 	},
 
-
 	ultimaImportacion: { $date: '2021-10-29T19:59:21.546Z' }
 }
 console.log('gimnasio', gimnasio)
-export default {
-
-}
+export default {}
 </script>

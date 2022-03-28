@@ -72,7 +72,7 @@ const nuxtConfig = {
 
 	// Build Configuration (https://go.nuxtjs.dev/config-build)
 	build: {
-		extend (config, ctx) {
+		extend(config, ctx) {
 			config.resolve.alias['@sass'] = path.join(__dirname, 'sass')
 			config.resolve.alias['@lib'] = path.join(__dirname, 'lib')
 		},

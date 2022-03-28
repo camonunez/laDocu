@@ -1,21 +1,21 @@
 <template lang="pug">
 .pagina.paginaIndex
-  .anchoWrapper.py2rem
-    h1.tac.aMano.fz5rem Las docus
+	.anchoWrapper.py2rem
+		h1.tac.aMano.fz5rem Las docus
 
-    .tarjetas
-      .tarjeta.p2rem.mt2rem.anchoComun.radio.sombra(v-for="(docu, docuID) in docus")
-        .flex.jcsb.aic
-          .nombre.bold.fz2rem {{docu.nombre}}
-          n-link(:to="docu.path")
-            .oicono.flecha.fz3rem
+		.tarjetas
+			.tarjeta.p2rem.mt2rem.anchoComun.radio.sombra(v-for="(docu, docuID) in docus")
+				.flex.jcsb.aic
+					n-link(:to="docu.path")
+						.nombre.bold.fz2rem {{docu.nombre}}
+						.oicono.flecha.fz3rem
 
 
 </template>
 
 <script>
 export default {
-	data () {
+	data() {
 		return {
 			docus: {
 				go5: {

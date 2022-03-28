@@ -20,7 +20,6 @@ Codigo(lang="json").
 
 </template>
 <script>
-
 const instancia = {
 	_id: 'jVS0yfMbiU',
 	claseID: 'ZOS6aoxESp',
@@ -39,7 +38,5 @@ const instancia = {
 	}
 }
 console.log('instancia', instancia)
-export default {
-
-}
+export default {}
 </script>

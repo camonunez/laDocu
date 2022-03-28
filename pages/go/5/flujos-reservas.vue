@@ -82,18 +82,18 @@ const codigo = `function calcularPosibilidade () {};
 const asdf = 3;
 calcularPosibilidade.sDeReserva(Gimnasio, Usuario.membresias, { claseID, horarioID, fecha }, opciones = {})`
 export default {
-	data () {
+	data() {
 		return {
 			codigo
 		}
 	},
 	computed: {
-		codigo2 () {
+		codigo2() {
 			return this.fsda.toString()
 		}
 	},
 	methods: {
-		fsda (fdds, ds) {
+		fsda(fdds, ds) {
 			// DFASFD
 			console.log('obj', { fdds, ds })
 		}

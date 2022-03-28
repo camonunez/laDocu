@@ -26,7 +26,7 @@
 </template>
 <script>
 export default {
-	data () {
+	data() {
 		return {
 			current: []
 			// links: {
@@ -35,13 +35,19 @@ export default {
 		}
 	},
 	watch: {
-		$route (v) {
-			if (this.current.length === 1 && this.current[0] !== v.name && v.name.startsWith(`${this.current[0]}-`)) return
+		$route(v) {
+			if (
+				this.current.length === 1 &&
+				this.current[0] !== v.name &&
+				v.name.startsWith(`${this.current[0]}-`)
+			) {
+				return
+			}
 			if (v.name.startsWith('go-5-')) this.current = ['go-5']
 			else this.current = [v.name]
 		}
 	},
-	mounted () {
+	mounted() {
 		if (this.$route.name.startsWith('go-5-')) this.current = ['go-5']
 		else this.current = [this.$route.name]
 	}
@@ -61,5 +67,4 @@ export default {
 	.ologo
 		font-size: 1.6em
 		vertical-align: middle
-
 </style>

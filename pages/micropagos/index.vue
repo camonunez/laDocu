@@ -1,6 +1,6 @@
 <template lang="pug">
 .pagina.paginaIndex
-  h1 Micropagos
+	h1 Micropagos
 </template>
 <script>
 export default {}

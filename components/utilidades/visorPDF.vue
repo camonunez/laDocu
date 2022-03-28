@@ -30,14 +30,18 @@ export default {
 			default: null
 		}
 	},
-	data () {
+	data() {
 		return {
 			mostrandoPDF: null
 		}
 	},
 	methods: {
-		abrir () { this.mostrandoPDF = true },
-		cerrar () { this.mostrandoPDF = false }
+		abrir() {
+			this.mostrandoPDF = true
+		},
+		cerrar() {
+			this.mostrandoPDF = false
+		}
 	},
 	traducciones: {
 		siFalla: {
@@ -78,5 +82,4 @@ export default {
 					transform: translate(-50%, -50%)
 					text-align: center
 					z-index: 0
-
 </style>

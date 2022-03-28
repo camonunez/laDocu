@@ -81,7 +81,7 @@
 </template>
 <script>
 export default {
-	data () {
+	data() {
 		return {}
 	},
 	computed: {},
@@ -107,6 +107,4 @@ export default {
 				color: #666
 				text-align: center
 				padding: .5em 1em
-
-
 </style>

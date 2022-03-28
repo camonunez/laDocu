@@ -15,12 +15,12 @@ export default {
 			default: 'js'
 		}
 	},
-	data () {
+	data() {
 		return {
 			montado: null
 		}
 	},
-	mounted () {
+	mounted() {
 		this.montado = true
 		this.$nextTick(() => {
 			this.$prism.highlightAll()

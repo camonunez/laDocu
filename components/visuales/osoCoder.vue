@@ -116,6 +116,4 @@ svg
 	fill: var(--dots)
 .shades-frame
 	fill: var(--frame)
-
-
 </style>

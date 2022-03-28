@@ -149,7 +149,6 @@ Codigo(lang="json").
 
 </template>
 <script>
-
 const perfil = {
 	_id: 'mFK6-5hua',
 	altura: 1.84,
@@ -335,7 +334,5 @@ const perfil = {
 	}
 }
 console.log('perfil', perfil)
-export default {
-
-}
+export default {}
 </script>

@@ -7,11 +7,12 @@ a-config-provider(:locale="localeAnt")
 		PieDePagina.elPie
 </template>
 <script>
-
 import esEs from 'ant-design-vue/lib/locale-provider/es_ES'
 export default {
 	computed: {
-		localeAnt () { return esEs }
+		localeAnt() {
+			return esEs
+		}
 	}
 }
 </script>
@@ -34,5 +35,4 @@ export default {
 .elPie
 	position: relative
 	z-index: 100
-
 </style>

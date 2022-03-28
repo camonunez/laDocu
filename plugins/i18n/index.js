@@ -8,17 +8,18 @@ import en from './en-us'
 import es from './es-cl'
 import pt from './pt-br'
 
-function obtenerTraduccionesLocales (componente) {
+function obtenerTraduccionesLocales(componente) {
 	const { $options } = componente
 	const { traducciones } = $options
 	// console.log('process.client', process.client)
 	// console.log('traducciones', traducciones)
-	const retorno = typeof traducciones === 'function' ? traducciones() : traducciones
+	const retorno =
+		typeof traducciones === 'function' ? traducciones() : traducciones
 	// console.log('retorno', retorno)
 	return retorno
 }
 
-function obtenerTraduccionesGlobales () {
+function obtenerTraduccionesGlobales() {
 	const traduccionesPorIdioma = {
 		es,
 		en,
@@ -37,12 +38,17 @@ function obtenerTraduccionesGlobales () {
 	return traduccionesGlobales
 }
 
-function traducir (key) {
+function traducir(key) {
 	// console.log('traducir', key)
 	const componenteActual = this
 	const traduccionesLocales = obtenerTraduccionesLocales(componenteActual)
 	const traduccionesItem = _.get(traduccionesLocales, key)
-	if (traduccionesItem && _.isObject(traduccionesItem) && !_.isArray(traduccionesItem) && !_.isFunction(traduccionesItem)) {
+	if (
+		traduccionesItem &&
+		_.isObject(traduccionesItem) &&
+		!_.isArray(traduccionesItem) &&
+		!_.isfunction(traduccionesItem)
+	) {
 		return _.get(traduccionesItem, Idiomas.activo, key)
 	} else {
 		const traduccionesGlobales = obtenerTraduccionesGlobales(componenteActual)
@@ -57,18 +63,18 @@ const Idiomas = {
 	// disponibles: ['es', 'en'],
 	activo: 'es',
 	porDefecto: true,
-	init () {
+	init() {
 		this.setDefault()
 		const esto = this
 		if (typeof window === 'undefined') return
-		window.addEventListener('languagechange', function () {
+		window.addEventListener('languagechange', () => {
 			if (esto.porDefecto) esto.setDefault()
 		})
 	},
-	setDefault () {
+	setDefault() {
 		this.porDefecto = true
 	},
-	identificarDefault () {
+	identificarDefault() {
 		if (typeof navigator === 'undefined') return
 		const navLangs = navigator.languages
 
@@ -83,7 +89,7 @@ const Idiomas = {
 
 		return encontrado || inicial
 	},
-	set (locale) {
+	set(locale) {
 		if (typeof locale === 'undefined' || !locale) return this.setDefault()
 		locale = locale.toLowerCase()
 
@@ -101,9 +107,8 @@ const Idiomas = {
 	}
 }
 
-
 const Plugin = {
-	install (Vue) {
+	install(Vue) {
 		Vue.util.defineReactive(Idiomas, 'activo', Idiomas.activo)
 		Vue.prototype.$idioma = Idiomas
 
@@ -119,7 +124,7 @@ Vue.use(Plugin)
 
 export default function ({ app }) {
 	extend(app, {
-		mounted () {
+		mounted() {
 			consolo.log('Traductor MOUNTED')
 			const plugin = this.$idioma
 			plugin.init(this)

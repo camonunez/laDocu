@@ -8,7 +8,11 @@ module.exports = {
 		parser: '@babel/eslint-parser',
 		requireConfigFile: false
 	},
-	extends: ['@nuxtjs', 'plugin:nuxt/recommended'],
+	extends: [
+		'@nuxtjs',
+		'plugin:nuxt/recommended',
+		'plugin:prettier/recommended'
+	],
 	plugins: ['prettier'],
 	// add your custom rules here
 	rules: {
@@ -20,6 +24,7 @@ module.exports = {
 		'no-console': 'off',
 		'no-undef': ['warn', { typeof: false }],
 		// 'standard/computed-property-even-spacing': 'off',
+		// 'space-before-function-paren': ['error', 'never'],
 		'import/no-webpack-loader-syntax': 'off',
 		'prefer-promise-reject-errors': 'off',
 		'no-throw-literal': 'off',

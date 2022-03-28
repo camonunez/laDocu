@@ -13,7 +13,7 @@ let logear = {
 	log: console.log,
 	info: console.info,
 	warn: console.warn,
-	error: console.error,
+	error: console.error
 }
 // eslint-disable-next-line no-console
 if (!process.dev) {
@@ -21,7 +21,7 @@ if (!process.dev) {
 		log: () => {},
 		info: () => {},
 		warn: () => {},
-		error: () => {},
+		error: () => {}
 	}
 }
 
@@ -38,20 +38,21 @@ const methods = {
 		// this.$root.$emit('alerta', { texto: 'Solicitando info al servidor', titulo: 'Cargando...' })
 		const headers = {
 			'Content-Type': 'application/json',
-			Accept: 'application/json',
+			Accept: 'application/json'
 		}
-		if (sessionStorage.token)
+		if (sessionStorage.token) {
 			headers.Authorization = `Bearer ${sessionStorage.token}`
+		}
 		let data
 		try {
 			data = await fetch(`${process.env.apiUrl}${ruta}`, {
 				method: 'post',
 				headers,
 				credentials: 'include',
-				body: JSON.stringify(Object.assign(operacion)),
+				body: JSON.stringify(Object.assign(operacion))
 			})
-				.then((r) => r.json())
-				.catch((e) => {
+				.then(r => r.json())
+				.catch(e => {
 					logear.error('Solicitud no resuelta', e)
 					return { ok: 0, error: e }
 				})
@@ -64,12 +65,12 @@ const methods = {
 			if (data.error) {
 				this.$root.$emit('alerta', {
 					texto: data.error,
-					titulo: 'Error al solicitar información al servidor',
+					titulo: 'Error al solicitar información al servidor'
 				})
 			} else {
 				this.$root.$emit('alerta', {
 					titulo: 'ERROR',
-					texto: 'Error al solicitar información al servidor',
+					texto: 'Error al solicitar información al servidor'
 				})
 			}
 		}
@@ -78,7 +79,7 @@ const methods = {
 	async $modificar(pathSets) {
 		console.log('modificar', pathSets)
 		let errs = 0
-		this._.forEach(pathSets, (ps) => {
+		this._.forEach(pathSets, ps => {
 			if (Object.keys(ps).length !== 2) {
 				console.log('Pathset inválido', ps)
 				errs = errs + 1
@@ -177,12 +178,12 @@ const methods = {
 		})
 		document.body.appendChild(form)
 		form.submit()
-	},
+	}
 }
 
 const mixin = {
 	methods,
-	computed,
+	computed
 }
 
 function $irURLExterna(url) {
