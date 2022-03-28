@@ -8,13 +8,8 @@ module.exports = {
 		parser: '@babel/eslint-parser',
 		requireConfigFile: false
 	},
-	extends: [
-		'@nuxtjs',
-		'plugin:nuxt/recommended',
-		'prettier'
-	],
-	plugins: [
-	],
+	extends: ['@nuxtjs', 'plugin:nuxt/recommended'],
+	plugins: ['prettier'],
 	// add your custom rules here
 	rules: {
 		indent: ['error', 'tab', { SwitchCase: 1 }],
@@ -29,7 +24,16 @@ module.exports = {
 		'prefer-promise-reject-errors': 'off',
 		'no-throw-literal': 'off',
 		'no-multiple-empty-lines': 'off',
-		'vue/multi-word-component-names': 'off'
+		'vue/html-indent': [
+			'error',
+			'tab',
+			{
+				attribute: 1,
+				baseIndent: 1,
+				closeBracket: 0,
+				alignAttributesVertically: true,
+				ignores: []
+			}
+		]
 	}
 }
-

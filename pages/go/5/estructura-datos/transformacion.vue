@@ -35,7 +35,7 @@
 
 		.bloque
 			.pretitulo Se unirán en #[span.mongoDB(title='MongoDB') documentos de la colección] de perfiles de usuario.
-			h3.titulo Perfiles 
+			h3.titulo Perfiles
 			.tablas
 				.tabla(
 					v-for='nombre in "users box_usuario role_user mensualidad pago_mensualidad reservas".split(" ")'
@@ -65,13 +65,13 @@
 
 	.pieConLinks
 		.flex.jcfe
-			n-link.linkSeccion(to="/go/5/estructura-datos/cambiosAdicionales") 
+			n-link.linkSeccion(to="/go/5/estructura-datos/cambiosAdicionales")
 				| Cambios adicionales
 				span.oicono.adelante
 </template>
 <script>
 export default {
-	data() {
+	data () {
 		return {}
 	},
 	computed: {},
@@ -89,9 +89,9 @@ export default {
 		padding: 2em
 		border: 2px solid white
 		//> .pretitulo
-			font-size: 1.2em	
+			font-size: 1.2em
 		> .titulo
-			font-size: 1.2em	
+			font-size: 1.2em
 			+bold
 			color: #589636
 

@@ -20,12 +20,11 @@ export default {
 			montado: null
 		}
 	},
-	mounted() {
+	mounted () {
 		this.montado = true
 		this.$nextTick(() => {
 			this.$prism.highlightAll()
 		})
-		
 	}
 }
 </script>

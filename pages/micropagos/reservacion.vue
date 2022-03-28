@@ -11,7 +11,7 @@
 			.titulo Detalle descriptivo
 			.paso Se rechaza reserva si el perfil tiene un estado inactivo, suspendido o congelado.
 
-			.subtitulo 
+			.subtitulo
 			.paso Se obtiene el ID del gimnasio activo del documento del perfil del usuario.
 			.paso Se busca la instancia para la que se desea hacer la reserva en la base de datos del gimnasio. Si no existe se rechaza.
 			.paso Si no existe la clase o el horario que indica la instancia, se rechaza.
@@ -24,11 +24,11 @@
 			.paso Se revisa si ya se ha reservado revisando la información de participantes de la instancia. Si no se indica membresía a utilizar (con membresiaID), se rechaza si el usuario ya tiene una reserva para la instancia. Por otro lado, si se indica una membresía a utilizar, sólo se rechazará si el usuario ya tiene una reserva con *esa* membresía. En caso de rechazarse, se responde como si la reserva hubiera sido exitosa, con los datos de la reserva existente.
 			.paso Se revisa que queden cupos para la instancia, según la cantidad de participantes y el límite de cupos del horario.
 
-			.subtitulo 
-			.paso Si no se indica membresía a utilizar, se utiliza  #[span.fx laReservaIdonea] 
-			.paso Si se indica membresía a utilizar, se utiliza  #[span.fx calcularPosibilidadesDeReserva] 
+			.subtitulo
+			.paso Si no se indica membresía a utilizar, se utiliza  #[span.fx laReservaIdonea]
+			.paso Si se indica membresía a utilizar, se utiliza  #[span.fx calcularPosibilidadesDeReserva]
 			br
-			.paso Si se indica membresía a utilizar, se utiliza  #[span.fx calcularPosibilidadesDeReserva] 
+			.paso Si se indica membresía a utilizar, se utiliza  #[span.fx calcularPosibilidadesDeReserva]
 
 		.argumentos
 			.titulo Argumentos
@@ -43,19 +43,19 @@
 			.argumento
 				span.nombre membresiaID
 				span.tipo (string)
-				span.descripcion #[span.opcional opcional] Identificador de la membresía a utilizar 
+				span.descripcion #[span.opcional opcional] Identificador de la membresía a utilizar
 		.retornos
 			.titulo Retorna
 			.retorno
 				span.nombre perfil
 				span.tipo (objeto)
-				span.descripcion Documento 
+				span.descripcion Documento
 
 
 	.funcion
 		Codigo laReservaIdonea (gimnasio, membresias, { claseID, horarioID, fecha })
 		.descripcion Para una
-	
+
 
 	.funcion
 		Codigo calcularPosibilidadesDeReserva(Gimnasio, Usuario.membresias, { claseID, horarioID, fecha }, opciones = {})
@@ -96,7 +96,7 @@ export default {
 	methods: {
 		fsda (fdds, ds) {
 			// DFASFD
-			console.log('obj', {fdds, ds})
+			console.log('obj', { fdds, ds })
 		}
 	}
 }
@@ -120,8 +120,7 @@ export default {
 			margin-top: 1em
 		.titulo
 			font-size: 1.2em
-		.subtitulo
-			+fwb
+
 		.argumento,
 		.retorno,
 		.paso
@@ -129,18 +128,18 @@ export default {
 			.nombre,
 			.tipo
 				color: #0075A2
-				+fwb	
+
 			.nombre
 				&::after
-					content: ' ' 
+					content: ' '
 			.tipo
 				font-style: italic
 				&::after
-					content: ': ' 
+					content: ': '
 					color: initial
 			.opcional
 				font-style: italic
-				+fwb
-				opacity: .5	
+
+				opacity: .5
 
 </style>

@@ -28,7 +28,8 @@ const vars = {
 	'border-radius-base': '6px', // major border radius
 	'border-width-base': '0',
 	'box-shadow-base': '0 0 0 rgba(0, 0, 0, 0)', // major shadow for layers
-	'font-family': '"Jost", -apple-system, BlinkMacSystemFont, Meiryo, "Segoe UI", Roboto, Helvetica, Arial, sans-serif',
+	'font-family':
+		'"Inconsolata", -apple-system, BlinkMacSystemFont, Meiryo, "Segoe UI", Roboto, Helvetica, Arial, sans-serif',
 	'font-size-base': `${fontSize}px`,
 	'font-size-lg': '20px',
 	'font-size-sm': '13px',

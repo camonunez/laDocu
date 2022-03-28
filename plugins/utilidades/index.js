@@ -5,9 +5,7 @@ import phoneValidator from 'phone'
 import { customAlphabet } from 'nanoid'
 import parameterize from './parameterize'
 
-
-
-function inspect (objeto) {
+function inspect(objeto) {
 	return util.inspect(objeto, { colors: true, depth: null })
 }
 
@@ -15,7 +13,7 @@ let logear = {
 	log: console.log,
 	info: console.info,
 	warn: console.warn,
-	error: console.error
+	error: console.error,
 }
 // eslint-disable-next-line no-console
 if (!process.dev) {
@@ -23,31 +21,37 @@ if (!process.dev) {
 		log: () => {},
 		info: () => {},
 		warn: () => {},
-		error: () => {}
+		error: () => {},
 	}
 }
 
 const computed = {}
 
 const methods = {
-	$id () { 
-		const alphabet = '0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz'
+	$id() {
+		const alphabet =
+			'0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz'
 		const MiniID = customAlphabet(alphabet, 10)
 		return MiniID()
-	 },
-	async $olicitar (operacion, ruta = '/api/data.json') {
+	},
+	async $olicitar(operacion, ruta = '/api/data.json') {
 		// this.$root.$emit('alerta', { texto: 'Solicitando info al servidor', titulo: 'Cargando...' })
-		const headers = { 'Content-Type': 'application/json', Accept: 'application/json' }
-		if (sessionStorage.token) headers.Authorization = `Bearer ${sessionStorage.token}`
+		const headers = {
+			'Content-Type': 'application/json',
+			Accept: 'application/json',
+		}
+		if (sessionStorage.token)
+			headers.Authorization = `Bearer ${sessionStorage.token}`
 		let data
 		try {
 			data = await fetch(`${process.env.apiUrl}${ruta}`, {
 				method: 'post',
 				headers,
 				credentials: 'include',
-				body: JSON.stringify(Object.assign(operacion))
-			}).then(r => r.json())
-				.catch(e => {
+				body: JSON.stringify(Object.assign(operacion)),
+			})
+				.then((r) => r.json())
+				.catch((e) => {
 					logear.error('Solicitud no resuelta', e)
 					return { ok: 0, error: e }
 				})
@@ -58,17 +62,23 @@ const methods = {
 			const error = data.error || data
 			logear.info('Procesado error ', error)
 			if (data.error) {
-				this.$root.$emit('alerta', { texto: data.error, titulo: 'Error al solicitar información al servidor' })
+				this.$root.$emit('alerta', {
+					texto: data.error,
+					titulo: 'Error al solicitar información al servidor',
+				})
 			} else {
-				this.$root.$emit('alerta', { titulo: 'ERROR', texto: 'Error al solicitar información al servidor' })
+				this.$root.$emit('alerta', {
+					titulo: 'ERROR',
+					texto: 'Error al solicitar información al servidor',
+				})
 			}
 		}
 		return data
 	},
-	async $modificar (pathSets) {
+	async $modificar(pathSets) {
 		console.log('modificar', pathSets)
 		let errs = 0
-		this._.forEach(pathSets, ps => {
+		this._.forEach(pathSets, (ps) => {
 			if (Object.keys(ps).length !== 2) {
 				console.log('Pathset inválido', ps)
 				errs = errs + 1
@@ -88,7 +98,7 @@ const methods = {
 		}
 		return solicitud
 	},
-	async $autorizarCarga (ruta) {
+	async $autorizarCarga(ruta) {
 		if (!ruta) throw 'Falta la ruta del archivo a autorizar'
 		const solicitud = await this.$olicitar({ method: 'S3', ruta })
 		if (!solicitud.ok) {
@@ -98,7 +108,7 @@ const methods = {
 		}
 		return solicitud.url
 	},
-	$isEmail (email) {
+	$isEmail(email) {
 		try {
 			return isEmail(email)
 		} catch (e) {
@@ -106,28 +116,36 @@ const methods = {
 			return false
 		}
 	},
-	$validarTelefono (codigoPais, telefono) {
+	$validarTelefono(codigoPais, telefono) {
 		const resultado = phoneValidator(telefono, codigoPais)
 		if (this._.isEmpty(resultado)) return false
 		else return resultado[0]
 	},
-	$nArray (final, inicial = 1) {
+	$nArray(final, inicial = 1) {
 		const array = []
 		for (inicial; inicial <= final; inicial++) array.push(inicial)
 		return array
 	},
 
-	$monetizado (monto, moneda = 'CLP') {
+	$monetizado(monto, moneda = 'CLP') {
 		monto = Number(monto)
-		if (isNaN(monto)) { return 'NaN' }
-		if (monto === 0) { return 'Gratis!' }
-		if (!monto) { return null }
-		if (monto <= 0) { return 'ERRNEG' }
+		if (isNaN(monto)) {
+			return 'NaN'
+		}
+		if (monto === 0) {
+			return 'Gratis!'
+		}
+		if (!monto) {
+			return null
+		}
+		if (monto <= 0) {
+			return 'ERRNEG'
+		}
 		if (moneda === 'USD') monto = monto.toFixed(2)
 		return monto.toString().replace(/\B(?=(\d{3})+(?!\d))/g, '.')
 	},
 
-	$enviarForm (url, datos, method = 'post') {
+	$enviarForm(url, datos, method = 'post') {
 		const _ = this._
 		const form = document.createElement('form')
 		form.setAttribute('method', method)
@@ -159,19 +177,19 @@ const methods = {
 		})
 		document.body.appendChild(form)
 		form.submit()
-	}
+	},
 }
 
 const mixin = {
 	methods,
-	computed
+	computed,
 }
 
-function $irURLExterna (url) {
+function $irURLExterna(url) {
 	window.open(url, '_blank', 'noopener')
 }
 
-function capitalizar (string) {
+function capitalizar(string) {
 	if (!string) return null
 	const str = String(string)
 	return str.substring(0, 1).toUpperCase() + str.substring(1)
@@ -189,6 +207,4 @@ export default () => {
 	}
 }
 
-export {
-	inspect
-}
+export { inspect }

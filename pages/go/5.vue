@@ -10,7 +10,7 @@
 					n-link.linkSeccion(to="/go/5/estructura-datos/antigua") Antigua estructura
 					n-link.linkSeccion(to="/go/5/estructura-datos/transformacion") Reestructuración
 					n-link.linkSeccion(to="/go/5/estructura-datos/cambiosAdicionales") Cambios adicionales
-					
+
 					n-link.linkSeccion(to="/go/5/estructura-datos/nueva") Nueva estructura
 					n-link.linkSeccion.sublink(to="/go/5/estructura-datos/nueva#CodigoGimnasio") Gimnasio
 					n-link.linkSeccion.sublink(to="/go/5/estructura-datos/nueva#CodigoPerfil") Perfil
@@ -56,28 +56,28 @@ export default {}
 				background-image: url(/img/nubes.svg)
 				// background-attachment: fixed
 				opacity: .7
-				
+
 
 	.navegador
 		z-index: 2
 		flex: 16em 0 0
-		padding: calc(.5em + $alturaMenu) 2em
+		// padding: calc(.5em + $alturaMenu) 2em
 		background-color: transparentize(white, .7)
 		backdrop-filter: blur(.3em)
 
 		position: sticky
-		top: $alturaMenu
+		// top: $alturaMenu
 		align-self: flex-start // Fix para que funque el sticky con flex
-		height: calc(100vh - $alturaMenu)
+		// height: calc(100vh - $alturaMenu)
 
 
 		.link
 			display: block
 			margin: .5em 0
-			+fwb
+
 			user-select: none
 		.linksSeccion
-			padding-left: 1em	
+			padding-left: 1em
 			padding-bottom: 2em
 			+saliendo
 				max-height: 100vh

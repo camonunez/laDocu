@@ -1,0 +1,78 @@
+
+=saliendo
+	transition: all .3s ease
+	&.v-enter-active, &.v-leave-active
+		@content
+=salir
+	transition: all .3s ease
+	&.v-enter, &.v-leave-to
+		@content
+
+=bgcov
+	background-size: cover
+	background-repeat: no-repeat
+	background-position: center
+=bgcon
+	background-size: contain
+	background-repeat: no-repeat
+	background-position: center
+=micov
+	mask-size: cover
+	mask-repeat: no-repeat
+	mask-position: center
+=micon
+	mask-size: contain
+	mask-repeat: no-repeat
+	mask-position: center
+
+$compu: "(min-width: 760px)"
+$movil: "(max-width: 759.9px)"
+=compu
+	@media #{$compu}
+		@content
+=movil
+	@media #{$movil}
+		@content
+
+=light
+	font-weight: 300
+=regular
+	font-weight: 400
+=medium
+	font-weight: 500
+=bold
+	font-weight: 700
+=black
+	font-weight: 900
+
+// Radios
+$radio: .6rem
+$radio2: 1.2rem
+$radio3: 1.8rem
+
+=radio
+	border-radius: $radio
+=radio2
+	border-radius: $radio2
+=radio3
+	border-radius: $radio3
+
+=sombra
+	box-shadow: 0 0 1rem rgba(0,0,0,.05)
+=sombra2
+	box-shadow: 0 0 1rem rgba(0,0,0,.1)
+=sombra3
+	box-shadow: 0 0 1rem rgba(0,0,0,.15)
+
+$anchoComun: 30rem
+$paddingComun: 2rem
+$anchoWrapper: #{$anchoComun + $paddingComun + $paddingComun}
+
+=anchoComun
+	width: $anchoComun
+	max-width: 100%
+=anchoWrapper
+	width: $anchoWrapper
+	max-width: 100%
+	margin: 0 auto
+	padding: 0 $paddingComun

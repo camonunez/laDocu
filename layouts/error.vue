@@ -10,7 +10,7 @@
 			.error404(v-if="error.statusCode === 404")
 				h1(:title="$t('noEncontrada')") {{ $t('noEncontrada') }}
 			.otro(v-else)
-				h1(:title="$t('haOcurridoUnError')") {{ $t('haOcurridoUnError') }} 
+				h1(:title="$t('haOcurridoUnError')") {{ $t('haOcurridoUnError') }}
 
 		.alternativas
 			//- NuxtLink(to="/") {{ $t('paginaDeInicio') }}
@@ -47,7 +47,7 @@ export default {
 .plantillaError
 	.zonaError
 		// border: 1px solid red
-		min-height: 100vh	
+		min-height: 100vh
 		display: flex
 		flex-flow: column nowrap
 		justify-content: center
@@ -57,7 +57,7 @@ export default {
 			width: 10em
 			height: 10em
 			+bgcov
-		
+
 		.emoji
 			font-size: 4em
 
@@ -83,16 +83,16 @@ export default {
 					// opacity: .5
 				$distancia: .75em
 				&::before
-					transform: translate(-$distancia, -$distancia) 
+					transform: translate(-$distancia, -$distancia)
 					color: #96c3ce
 					z-index: -2
 				color: #a79ab2
 				&::after
-					transform: translate($distancia, $distancia) 
+					transform: translate($distancia, $distancia)
 					color: #b57ba6
 					z-index: -1
 
-						
+
 		.alternativas
 			margin-top: 2em
 </style>

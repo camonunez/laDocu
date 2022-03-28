@@ -65,57 +65,57 @@ export default {
 </script>
 <style lang="sass" scoped>
 
-@keyframes read 
+@keyframes read
 	100%
-		transform: translate(0, -283.5px) 
+		transform: translate(0, -283.5px)
 .osoCoder
-	--fur: #9a6a4a 
-	--ear: #e4b89b 
-	--cap-strap--large: #383838 
-	--cap-strap--small: #242424 
-	--cap: #0d0d0d 
-	--dots: rgba(242,242,242,0.6) 
-	--frame: #000 
-	--shine: rgba(242,242,242,0.35) 
-	--lens: #141414 
+	--fur: #9a6a4a
+	--ear: #e4b89b
+	--cap-strap--large: #383838
+	--cap-strap--small: #242424
+	--cap: #0d0d0d
+	--dots: rgba(242,242,242,0.6)
+	--frame: #000
+	--shine: rgba(242,242,242,0.35)
+	--lens: #141414
 	--code-one: #4BC6B9
 	--code-two: #96C3CE
 	--code-three: #A79AB2
 	--code-four: #B57BA6
 
-svg 
+svg
 	height: 10em
-.code-block 
-	animation: read 1s infinite linear 
-	rect 
-		fill: var(--code-one) 
-		&:nth-of-type(5) 
-			fill: var(--code-four) 
-		&:nth-of-type(12) 
-			fill: var(--code-three) 
+.code-block
+	animation: read 1s infinite linear
+	rect
+		fill: var(--code-one)
+		&:nth-of-type(5)
+			fill: var(--code-four)
+		&:nth-of-type(12)
+			fill: var(--code-three)
 .code-block rect:nth-of-type(8),
-.code-block rect:nth-of-type(9) 
-	fill: var(--code-two) 
+.code-block rect:nth-of-type(9)
+	fill: var(--code-two)
 .bear__fur,
-.bear__outer-ear 
-	fill: var(--fur) 
+.bear__outer-ear
+	fill: var(--fur)
 .bear__inner-ear,
-.bear__muzzle 
-	fill: var(--ear) 
-.bear__cap-strap 
-	fill: var(--cap-strap--large) 
-.bear__small-cap-strap 
-	fill: var(--cap-strap--small) 
-.bear__cap 
-	fill: var(--cap) 
-.lens 
-	fill: var(--lens) 
-.lens__shine 
-	fill: var(--shine) 
-.shades-dot 
-	fill: var(--dots) 
-.shades-frame 
-	fill: var(--frame) 
-	
+.bear__muzzle
+	fill: var(--ear)
+.bear__cap-strap
+	fill: var(--cap-strap--large)
+.bear__small-cap-strap
+	fill: var(--cap-strap--small)
+.bear__cap
+	fill: var(--cap)
+.lens
+	fill: var(--lens)
+.lens__shine
+	fill: var(--shine)
+.shades-dot
+	fill: var(--dots)
+.shades-frame
+	fill: var(--frame)
+
 
 </style>

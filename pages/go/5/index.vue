@@ -2,7 +2,7 @@
 .pagina.paginaIndex
 	.contenido
 		h1 Reservas modularizadas y rediseñadas.
-		p 
+		p
 </template>
 <script>
 export default {

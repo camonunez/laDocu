@@ -26,7 +26,7 @@
 			CodigoInstancia
 
 	.pieConLinks.flex.jcfe
-		n-link.linkSeccion(to="/go/5/estructura-datos/ventajasDesventajas") 
+		n-link.linkSeccion(to="/go/5/estructura-datos/ventajasDesventajas")
 			| Ventajas y desventajas
 			span.oicono.adelante
 

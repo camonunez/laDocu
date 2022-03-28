@@ -14,13 +14,13 @@
 
 	.pieConLinks
 		.flex.jcfe
-			n-link.linkSeccion(to="/go/5/estructura-datos/nueva") 
+			n-link.linkSeccion(to="/go/5/estructura-datos/nueva")
 				| Nueva estructura
 				span.oicono.adelante
 </template>
 <script>
 export default {
-	data() {
+	data () {
 		return {}
 	},
 	computed: {},

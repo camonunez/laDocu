@@ -3,7 +3,7 @@
 	.contenido
 		.encabezado
 			h1 Estructura de datos
-			p 
+			p
 
 	.pieConLinks
 		.flex.jcfe
@@ -17,7 +17,7 @@
 </template>
 <script>
 export default {
-	data() {
+	data () {
 		return {}
 	},
 	computed: {},
