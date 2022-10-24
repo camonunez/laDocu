@@ -10757,7 +10757,7 @@ __metadata:
     nanoid: ^3.3.2
     node-gyp: ^9.0.0
     nuxt: ^2.15.8
-    phone: ^3.1.14
+    phone: ^3.1.29
     prettier: ^2.6.1
     prism-js-fold: ^1.0.1
     prism-themes: ^1.9.0
@@ -12647,10 +12647,10 @@ __metadata:
   languageName: node
   linkType: hard
 
-"phone@npm:^3.1.14":
-  version: 3.1.14
-  resolution: "phone@npm:3.1.14"
-  checksum: 68aa245d520b947c9f2a200fc1d659927f2e8338cbfb292d78d2323f30e57dd547255ee0242032a54f40068fecf9341aba3bb1b0eb5f74636aac32a0b90029ba
+"phone@npm:^3.1.29":
+  version: 3.1.29
+  resolution: "phone@npm:3.1.29"
+  checksum: 7477a7965b5cd15ffa9c9ebeb3ffc6551ae58d45bc63297e8ee6d09482cfd6e6c303bbed5b69b1be628a24a2bb9dfd1b05e6565808ae290ca256c68fce57d5fe
   languageName: node
   linkType: hard
 
